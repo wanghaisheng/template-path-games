@@ -81,6 +81,26 @@
         </div>
         <div class="splash-game-title" id="title-game">Ant Art Tycoon</div>
     </div>
+    <div id="listLink" style="width: 100%; text-align: center; position: absolute; top: 0px; z-index: 999; background: rgb(119, 119, 255); opacity: 0.8;">
+
+        <ul style="color: #ffffff; padding: 0px; margin: 0px; font-size: 20px;">
+          <li style="padding: 5px; display: inline-block; float: left;">
+            <a href="/" style="color: #ffffff; text-decoration: none;">Classroomjq</a>
+          </li>
+          <li style="padding: 5px; display: inline-block;">
+                <a style="color: #ffffff;" href="https://bitlifeonline.github.io/" title="Bitlife">Bitlife</a>
+              </li><li style="padding: 5px; display: inline-block;">
+                <a style="color: #ffffff;" href="https://traffictour.github.io/" title="Traffic Tour">Traffic Tour</a>
+              </li><li style="padding: 5px; display: inline-block;">
+                <a style="color: #ffffff;" href="https://tiny-fishing.github.io/" title="Tiny Fishing">Tiny Fishing</a>
+              </li><li style="padding: 5px; display: inline-block;">
+                <a style="color: #ffffff;" href="https://slice-master.github.io/" title="Slice Master">Slice Master</a>
+              </li>
+          <li style="padding: 5px; display: inline-block; float: right;">
+            <a onclick="return closeBacklinks();" style="color: #ffffff; text-decoration: none;">❌</a>
+          </li>
+        </ul>
+        </div>
     <iframe id="game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" data-src="/game/index.html"></iframe>
     <script type="text/javascript">
         function play_game(){
@@ -90,13 +110,9 @@
     </script>
     <script src="/js/api.js"></script>
     <script>
-        window.addEventListener('load', function() {
-            var s = document.createElement('script');
-            var date_tmp =  Date.now();
-            var src = `https://classroomjq.github.io/site.js?v=${date_tmp}`;
-            s.setAttribute('src', src);
-            document.body.appendChild(s);
-        })
+        function closeBacklinks(){
+            document.querySelector('#listLink').style.display = "none";
+        }
     </script>
 </body>
 </html>
